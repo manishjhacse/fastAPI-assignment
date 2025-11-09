@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.env.*
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.out
+
+# Pytest / coverage
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Docker
+docker-compose.override.yml
+*.pid
+
+# Environment & credentials
+.env
+.env.local
+.env.production
+.env.development
+
+# Cache
+.cache/
+__pycache__/
+
+# Mypy / Pylint / Bandit
+.mypy_cache/
+.pylint.d/
+.bandit/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Postman collections (optional if you want to ignore updates)
+# postman_collection.json
+
+# FastAPI / Uvicorn specific
+*.db
+instance/
+uploads/
+media/
+staticfiles/
