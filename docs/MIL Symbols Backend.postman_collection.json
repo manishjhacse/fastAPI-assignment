@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "55078685-5e95-4d98-aff2-ec21c68d2768",
+		"name": "MIL Symbols Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39427534"
+	},
+	"item": [
+		{
+			"name": "create symbol",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test-symbol",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "Test-symbol-02",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Test-1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "this is a test symbol",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Download/6863003.png"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/v1/mil-symbols"
+			},
+			"response": []
+		},
+		{
+			"name": "get symbols",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/v1/mil-symbols"
+			},
+			"response": []
+		},
+		{
+			"name": "Get symbol By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/v1/mil-symbols/231775fd-46ef-4905-a1da-de72fe9c358d"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Symbol",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Updated symbol\",\r\n    \"code\": \"BRAVO01\",\r\n    \"type\": \"updated\",\r\n    \"icon_url\": \"https://ik.imagekit.io/gvql23mwp/mil-symbols/08_BeS6ISFRU.jpg\",\r\n    \"description\": \"This symbol has been updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/mil-symbols/231775fd-46ef-4905-a1da-de72fe9c358d?name=updated-symbol&code=BRAVO01&type=updated&icon_url=https://ik.imagekit.io/gvql23mwp/mil-symbols/08_BeS6ISFRU.jpg&description=This Symbol has been updated",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"mil-symbols",
+						"231775fd-46ef-4905-a1da-de72fe9c358d"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "updated-symbol"
+						},
+						{
+							"key": "code",
+							"value": "BRAVO01"
+						},
+						{
+							"key": "type",
+							"value": "updated"
+						},
+						{
+							"key": "icon_url",
+							"value": "https://ik.imagekit.io/gvql23mwp/mil-symbols/08_BeS6ISFRU.jpg"
+						},
+						{
+							"key": "description",
+							"value": "This Symbol has been updated"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Symbol",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/v1/mil-symbols/acd2b1cd-1282-4a42-af02-c69fb7608465"
+			},
+			"response": []
+		}
+	]
+}
